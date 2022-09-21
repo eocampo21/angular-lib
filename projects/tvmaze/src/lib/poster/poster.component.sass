@@ -1,14 +1,27 @@
-.poster {
+.poster
     display: flex
+    margin: 2vw
     overflow: hidden
-    
-    &&__description {
+
+    &__img.left
+        border-bottom-left-radius: 30px
+        border-top-left-radius: 30px
+
+    &__img.right
+        border-bottom-right-radius: 30px
+        border-top-right-radius: 30px
+
+    &__description
         display: flex
         flex-direction: column
         justify-content: center
         padding-inline-end: 40px
+        padding-inline-end: 40px
+
         border: 1px solid #3f51b51c
         margin-block-start: 0
         margin-block-end: 0
-    }
-}
+
+
+ul li
+    list-style-type: none

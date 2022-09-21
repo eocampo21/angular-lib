@@ -12,18 +12,10 @@ class TvmazeComponent {
     }
 }
 TvmazeComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: TvmazeComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TvmazeComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.2.2", type: TvmazeComponent, selector: "tm-tvmaze", ngImport: i0, template: `
-    <p>
-      tvmaze works!
-    </p>
-  `, isInline: true });
+TvmazeComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.2.2", type: TvmazeComponent, selector: "tm-tvmaze", ngImport: i0, template: "", styles: [""] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: TvmazeComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'tm-tvmaze', template: `
-    <p>
-      tvmaze works!
-    </p>
-  ` }]
+            args: [{ selector: 'tm-tvmaze', template: "" }]
         }], ctorParameters: function () { return []; } });
 
 class TvmazeService {
@@ -59,40 +51,10 @@ class PosterComponent {
     }
 }
 PosterComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: PosterComponent, deps: [{ token: TvmazeService }], target: i0.ɵɵFactoryTarget.Component });
-PosterComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.2.2", type: PosterComponent, selector: "tm-poster", inputs: { showId: "showId", left: "left" }, ngImport: i0, template: `
-    <div class="container poster">
-      <ng-container *ngIf="left">
-        <img class="poster__img left" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-      </ng-container>
-     
-      <ul class="poster__description">
-        <li class="poster__name" *ngIf="posterUrl$ | async as poster"><p>Movies Name: {{poster.name}}</p></li>
-        <li class="poster__rating" *ngIf="posterUrl$ | async as poster" ><p>Rating: {{poster.rating.average}}</p></li>
-        <li class="poster__summary" *ngIf="posterUrl$ | async as poster" [innerHTML]="poster.summary" ></li>
-      </ul>
-      <ng-container *ngIf="!left">
-        <img class="poster__img right" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-      </ng-container>
-    </div>
-  `, isInline: true, styles: [".poster{display:flex;margin:2vw;overflow:hidden}.poster__img.left{border-bottom-left-radius:30px;border-top-left-radius:30px}.poster__img.right{border-bottom-right-radius:30px;border-top-right-radius:30px}.poster__description{display:flex;flex-direction:column;justify-content:center;padding-inline-end:40px;border:1px solid #3f51b51c;margin-block-start:0;margin-block-end:0}ul li{list-style-type:none}\n"], dependencies: [{ kind: "directive", type: i2.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "pipe", type: i2.AsyncPipe, name: "async" }] });
+PosterComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.2.2", type: PosterComponent, selector: "tm-poster", inputs: { showId: "showId", left: "left" }, ngImport: i0, template: "<div class=\"container poster\">\n  <ng-container *ngIf=\"left\">\n    <img class=\"poster__img left\" *ngIf=\"posterUrl$ | async as poster\" [src]=\"poster.image.medium\" />\n  </ng-container>\n \n  <ul class=\"poster__description\">\n    <li class=\"poster__name\" *ngIf=\"posterUrl$ | async as poster\"><p>Movies Name: {{poster.name}}</p></li>\n    <li class=\"poster__rating\" *ngIf=\"posterUrl$ | async as poster\" ><p>Rating: {{poster.rating.average}}</p></li>\n    <li class=\"poster__summary\" *ngIf=\"posterUrl$ | async as poster\" [innerHTML]=\"poster.summary\" ></li>\n  </ul>\n  <ng-container *ngIf=\"!left\">\n    <img class=\"poster__img right\" *ngIf=\"posterUrl$ | async as poster\" [src]=\"poster.image.medium\" />\n  </ng-container>\n</div>", styles: [".poster{display:flex;margin:2vw;overflow:hidden}.poster__img.left{border-bottom-left-radius:30px;border-top-left-radius:30px}.poster__img.right{border-bottom-right-radius:30px;border-top-right-radius:30px}.poster__description{display:flex;flex-direction:column;justify-content:center;padding-inline-end:40px;border:1px solid rgba(63,81,181,.1098039216);margin-block-start:0;margin-block-end:0}ul li{list-style-type:none}\n"], dependencies: [{ kind: "directive", type: i2.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "pipe", type: i2.AsyncPipe, name: "async" }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.2", ngImport: i0, type: PosterComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'tm-poster', template: `
-    <div class="container poster">
-      <ng-container *ngIf="left">
-        <img class="poster__img left" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-      </ng-container>
-     
-      <ul class="poster__description">
-        <li class="poster__name" *ngIf="posterUrl$ | async as poster"><p>Movies Name: {{poster.name}}</p></li>
-        <li class="poster__rating" *ngIf="posterUrl$ | async as poster" ><p>Rating: {{poster.rating.average}}</p></li>
-        <li class="poster__summary" *ngIf="posterUrl$ | async as poster" [innerHTML]="poster.summary" ></li>
-      </ul>
-      <ng-container *ngIf="!left">
-        <img class="poster__img right" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-      </ng-container>
-    </div>
-  `, styles: [".poster{display:flex;margin:2vw;overflow:hidden}.poster__img.left{border-bottom-left-radius:30px;border-top-left-radius:30px}.poster__img.right{border-bottom-right-radius:30px;border-top-right-radius:30px}.poster__description{display:flex;flex-direction:column;justify-content:center;padding-inline-end:40px;border:1px solid #3f51b51c;margin-block-start:0;margin-block-end:0}ul li{list-style-type:none}\n"] }]
+            args: [{ selector: 'tm-poster', template: "<div class=\"container poster\">\n  <ng-container *ngIf=\"left\">\n    <img class=\"poster__img left\" *ngIf=\"posterUrl$ | async as poster\" [src]=\"poster.image.medium\" />\n  </ng-container>\n \n  <ul class=\"poster__description\">\n    <li class=\"poster__name\" *ngIf=\"posterUrl$ | async as poster\"><p>Movies Name: {{poster.name}}</p></li>\n    <li class=\"poster__rating\" *ngIf=\"posterUrl$ | async as poster\" ><p>Rating: {{poster.rating.average}}</p></li>\n    <li class=\"poster__summary\" *ngIf=\"posterUrl$ | async as poster\" [innerHTML]=\"poster.summary\" ></li>\n  </ul>\n  <ng-container *ngIf=\"!left\">\n    <img class=\"poster__img right\" *ngIf=\"posterUrl$ | async as poster\" [src]=\"poster.image.medium\" />\n  </ng-container>\n</div>", styles: [".poster{display:flex;margin:2vw;overflow:hidden}.poster__img.left{border-bottom-left-radius:30px;border-top-left-radius:30px}.poster__img.right{border-bottom-right-radius:30px;border-top-right-radius:30px}.poster__description{display:flex;flex-direction:column;justify-content:center;padding-inline-end:40px;border:1px solid rgba(63,81,181,.1098039216);margin-block-start:0;margin-block-end:0}ul li{list-style-type:none}\n"] }]
         }], ctorParameters: function () { return [{ type: TvmazeService }]; }, propDecorators: { showId: [{
                 type: Input
             }], left: [{
