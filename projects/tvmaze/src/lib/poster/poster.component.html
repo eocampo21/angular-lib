@@ -1,15 +1,4 @@
 <div class="poster my-3">
-  <ng-container *ngIf="left">
-    <img class="poster__img left" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-  </ng-container>
-
-  <ul class="poster__description">
-    <li class="poster__name" *ngIf="posterUrl$ | async as poster"><p>Movies Name: {{poster.name}}</p></li>
-    <li class="poster__rating" *ngIf="posterUrl$ | async as poster" ><p>Rating: {{poster.rating.average}}</p></li>
-    <li class="poster__summary" *ngIf="posterUrl$ | async as poster" [innerHTML]="poster.summary" ></li>
-  </ul>
-
-  <ng-container *ngIf="!left">
-    <img class="poster__img right" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-  </ng-container>
+    <img class="poster__img" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
+    <p class="poster__rating mt-3" *ngIf="posterUrl$ | async as poster" >Rating: {{poster.rating.average}}</p>
 </div>
