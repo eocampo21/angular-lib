@@ -31,11 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://medium.com/@tomsu/how-to-build-a-library-for-angular-apps-4f9b38b0ed11
 
 ## Create lib
-### ng generate library {libName} --prefix tm
 ng generate library tvmaze --prefix tm
 
 ## build lib
-### ng build {libName}
 ng build tvmaze
 
 ### Create a component in the library
