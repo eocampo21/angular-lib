@@ -1,10 +1,1 @@
-<ld-navbar> </ld-navbar>
-<tm-container title="Home" subtitle="Latest movies">
-    <div class="page-container">
-        <ng-container *ngFor="let movie of results" >
-            <ng-container *ngIf="movie">
-                <tm-poster [posterProps]="movie"></tm-poster>
-            </ng-container>
-        </ng-container>
-    </div>
-</tm-container>
+<router-outlet></router-outlet>
