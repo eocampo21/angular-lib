@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TvmazeModule } from 'tvmaze';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     TvmazeModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
-<div class="poster my-3">
-    <img class="poster__img" *ngIf="posterUrl$ | async as poster" [src]="poster.image.medium" />
-    <p class="poster__rating mt-3" *ngIf="posterUrl$ | async as poster" >Rating: {{poster.rating.average}}</p>
+<div class="poster">
+    <img class="card-img-top" [src]="posterProps?.image?.original"  alt="Card image cap">
+    <div class="card-body my-3 ">
+        <p class="card-title">{{posterProps?.name}}</p>
+        <p class="card-text poster__rating mt-3" >Rating: {{posterProps?.rating?.average}}
+    </div>
 </div>
